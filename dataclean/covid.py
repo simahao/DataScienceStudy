@@ -1,9 +1,11 @@
+from csvutils import CsvData
 
-class Covid(Csv):
+
+class Covid(CsvData):
     def __init__(self, path):
         super(Covid, self).__init__(path)
     def deal_china_cronavirus(self):
-        return self.read_csv(self.path)
+        return self.read_csv()
 
 
 if __name__ == "__main__":

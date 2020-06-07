@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-class Csv(object):
+class CsvData(object):
     def __init__(self, path):
         self.path = path;
 
