@@ -4,9 +4,10 @@ import time
 import numpy as np
 import pandas as pd
 from selenium import webdriver
+from selenium.webdriver.chrome.webdriver import WebDriver
 
 
-def get_windwaves_bullet_screen(browser, url_month, url_day, url_var1, url_var2):
+def get_windwaves_bullet_screen(browser: WebDriver, url_month, url_day, url_var1, url_var2):
     one_episode_bs = pd.DataFrame()
     step = 0
     print("getting bullet screen from {}-{}".format(url_month, url_day))
