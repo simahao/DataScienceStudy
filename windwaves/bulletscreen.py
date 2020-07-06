@@ -3,7 +3,7 @@ import time
 
 import numpy as np
 import pandas as pd
-
+import selenium
 from selenium import webdriver
 from selenium.webdriver.chrome.webdriver import WebDriver
 
@@ -45,7 +45,8 @@ if __name__ == "__main__":
         [["06", "21", "104556", "8337559"], \
         ["06", "25", "151545", "8398205"]])
     # construct browser object according to browser driver
-    browser = webdriver.Chrome()
+    driver_path = r'C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chromedriver.exe'
+    browser = webdriver.Chrome(executable_path=driver_path)
     for i in range(url_info.shape[0]):
         ds = get_windwaves_bullet_screen(browser=browser, url_month=url_info[i][0], \
             url_day=url_info[i][1], url_var1=url_info[i][2], url_var2=url_info[i][3])
